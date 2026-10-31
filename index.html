@@ -3,85 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy – BackTap</title>
+  <title>Privacy Policy – GestureFlow</title>
   <style>
     body { font-family: sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
     h1 { font-size: 1.6em; }
     h2 { font-size: 1.1em; margin-top: 1.5em; }
+    a { overflow-wrap: anywhere; }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>This privacy policy applies to the <strong>BackTap</strong> app (hereby referred to as "Application") for mobile devices, created by <strong>Gabriel31</strong> (hereby referred to as "Service Provider") as a Commercial service. This service is intended for use "AS IS".</p>
+  <h1>GestureFlow Privacy Policy</h1>
+  <p><strong>Effective date:</strong> October 31, 2026</p>
+  <p>This policy applies to <strong>GestureFlow</strong> (formerly BackTap), Android package <code>com.gabriel.backtap</code>, provided by <strong>Gabriel31</strong> (“we” or “the developer”). For privacy questions or deletion requests, contact <a href="mailto:gabrieldrvss@gmail.com">gabrieldrvss@gmail.com</a>.</p>
 
-  <h2>What information does the Application obtain and how is it used?</h2>
-  <p>The Application does not collect, transmit, or store personal identifying information (such as your name, email address, or phone number) when you download and use it. Registration is not required to use the Application.</p>
+  <h2>Overview</h2>
+  <p>GestureFlow provides back taps, edge gestures, button remapping, drawing shortcuts, shake gestures, and user-configured actions and routines. Core gesture detection and context-rule processing take place on your device. You do not need to register or supply a name, email address, or phone number to use these features.</p>
+  <p>Optional Community features send information to Firebase, advertising and consent services process information described below, and purchases are handled by Google Play. Online identifiers and information you submit may constitute personal data, even when no real name is supplied.</p>
 
-  <h2>User Feedback and Rating Submissions</h2>
-  <p>The Application includes an optional in-app feedback feature allowing users to submit ratings and suggestions for app updates. When you choose to submit feedback, the Application securely transmits the following non-personal data to Google Cloud Firestore via Firebase Anonymous Authentication:</p>
+  <h2>Accessibility and device controls</h2>
+  <p>With your permission, GestureFlow uses Android’s Accessibility Service to recognize supported inputs, display gesture controls, and perform actions you configure, including navigation, screenshots, opening apps and shortcuts, media controls, and routines. It can inspect the active app and accessibility windows, including keyboard visibility, to apply per-app blocking and context rules. It does not use this access to collect typed text or upload screen content to the developer.</p>
+  <p>If you configure the action to read the last notification aloud, the app reads available notification text from accessibility events and temporarily holds the latest eligible text in memory. The text is passed to your selected Android text-to-speech engine. That engine may process speech locally or through its own online service, according to its settings and privacy policy. GestureFlow does not upload notification text to its Firebase services or advertising services.</p>
+  <p>Optional notification-listener access supports media controls. Optional root or Shizuku access supports additional device actions and button or shortcut functionality. These privileges are used for the features you configure. Screenshots, launched apps, custom intents, and automation broadcasts are handled by Android or their selected recipients; those apps and services have their own data practices.</p>
+
+  <h2>Sensors, context, and local learning</h2>
+  <p>The app processes accelerometer, gyroscope, and proximity readings, along with device and context information such as screen and lock state, orientation, battery and charging state, audio playback, audio or call mode, connected audio/Bluetooth devices, Wi-Fi connection state, and time. Processing depends on the features and rules you enable.</p>
+  <p>Raw gesture sensor readings are not uploaded by GestureFlow. Adaptive tuning and gesture feedback used for local learning are processed and stored on your device. The app does not automatically upload a history of your foreground apps, notification text, or gesture activity to the developer. Community sharing sends selected tuning values and device metadata only when you choose to publish, as described below.</p>
+
+  <h2>Installed apps, files, and settings</h2>
+  <p>GestureFlow queries installed apps and activities for action and shortcut selection, app-specific blocking, and app classification used by context rules. It may associate audio playback with app packages for music-related features. The app does not upload your installed-app inventory to its Community database or send that inventory to the developer.</p>
+  <p>Preferences, saved drawings, actions, routines, profiles, selected app packages, learning records, and permission-related settings are stored locally to provide the features you configure. Optional wallpaper actions read images from a folder you select.</p>
+  <p>If you export a settings backup, the app writes configuration data to the destination you choose through Android’s document picker. A destination may be a local file or a cloud document provider. An exported backup can contain app selections and other configuration details. Its storage and any later sharing depend on your chosen provider and actions. Community content downloaded from Firebase may also be cached locally.</p>
+
+  <h2>Optional Community sharing, votes, and reports</h2>
+  <p>When you publish a Community tuning, GestureFlow uploads the following to Google Cloud Firestore:</p>
   <ul>
-    <li>Your star rating (1 to 5) and optional written suggestion.</li>
-    <li>App version and build number.</li>
-    <li>Device manufacturer and model (e.g., to debug device-specific gesture detection).</li>
-    <li>Android OS / SDK version and timestamp.</li>
-    <li>An anonymous, randomly generated user identifier to manage review submissions.</li>
+    <li>The title and description you enter and the selected phone-case category.</li>
+    <li>Device manufacturer, model, codename, and a device-category key derived from those values. This key identifies a device type, not a unique physical phone.</li>
+    <li>Android API version, app version, publication timestamp, and content format version.</li>
+    <li>Selected detector, sensitivity, timing, guard, and threshold settings.</li>
+    <li>A Firebase Authentication user identifier used to associate the post with its creator.</li>
   </ul>
-  <p>This feedback data is used exclusively to evaluate and improve gesture detection algorithms and app performance. Feedback submissions are stored securely and are not sold or shared with third-party advertisers.</p>
+  <p>Community posts are available to other Community users. The published record includes its creator identifier and device metadata. The tuning upload uses a restricted set of detector settings; it does not automatically include your action assignments, blocked-app list, saved drawings, raw sensor samples, or notification text. Please avoid entering personal or sensitive information in the title or description.</p>
+  <p>Publishing, voting, removing a vote, deleting your post, or reporting content uses Firebase Anonymous Authentication. “Anonymous” means no name or email is required to sign in; the generated identifier can still link submissions from the same installation/session identity. Votes store the selected result against that identifier and contribute to feedback counts. Reports store the reported post ID and reporter identifier for moderation. Community features are used to share detector configurations, assess whether they work, and moderate content.</p>
+  <p>Firebase processes these requests and associated service information, including authentication identifiers and network information, under its terms and privacy practices. Browsing Community content also makes network requests to Firebase even if you do not publish.</p>
 
-  <h2>Analytics and Performance</h2>
-  <p>The Application uses <strong>Google Firebase Analytics</strong> to collect aggregated, anonymous usage and diagnostics metrics (such as gesture trigger events, detector model types, and general app interactions). This information helps the Service Provider identify bugs, optimize sensor performance across different hardware manufacturers, and enhance user experience. Firebase Analytics does not collect personal identifying information.</p>
+  <h2>Support and feedback</h2>
+  <p>The contact link opens your email app. You choose what to write and whether to send it. If you send an email, the developer receives your email address and the content and attachments you include, for responding to you and handling support or privacy requests. The current app does not upload star ratings or written app-update suggestions through a separate Firebase feedback form.</p>
 
-  <h2>Accessibility Service Usage</h2>
-  <p>To function, the Application uses Android Accessibility Service access. This is required to detect configured back tap gestures and perform user-selected actions such as Back, Home, Recents, Notifications, Quick Settings, Screenshot, Assistant, Flashlight toggling, or launching selected apps.</p>
-  <p>If enabled by the user, the Application also uses Accessibility features to detect contextual conditions such as the currently active app and whether the keyboard is visible so that blocking and context rules can work correctly. <strong>All accessibility-related processing stays strictly on your device.</strong> No accessibility data, screen content, typed text, or app usage data is collected, stored remotely, or transmitted by the Service Provider.</p>
+  <h2>Advertising, consent, and analytics</h2>
+  <p>GestureFlow integrates Google AdMob and the Google User Messaging Platform (UMP) to display app-open ads and manage applicable advertising privacy choices. Ad requests are gated by consent availability and purchase status. Pro users are eligible for the app’s ad-free experience.</p>
+  <p>Google’s Mobile Ads SDK collects and shares IP addresses, interactions with the app or ads, diagnostic information, and device or account identifiers, including available advertising identifiers. IP addresses may be used to estimate general location. Google uses this information for advertising, measurement, analytics, and fraud prevention. Ad content may use cookies or similar technologies. The information processed depends on consent, SDK configuration, and applicable requirements.</p>
+  <p>Use the in-app <strong>Privacy options</strong> entry to review or change advertising choices where the consent form is available. Device advertising controls vary by Android version. Changing personalization choices does not necessarily stop all advertising-related processing. The current app does not integrate the Firebase Analytics SDK or send custom gesture analytics events to Firebase Analytics.</p>
+  <p>See <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK data disclosures</a>, <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>, and <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.</p>
 
-  <h2>Sensor and Device State Access</h2>
-  <p>The Application uses device sensors and system state information, including accelerometer, gyroscope, proximity sensor, screen state, lock state, charging state, headset connection state, audio playback state, and call state, in order to detect back tap gestures and apply user-configured conditions or protections.</p>
-  <p>This processing is performed only on the device. <strong>No raw sensor data or device state data is uploaded, shared, or stored externally.</strong></p>
+  <h2>Purchases</h2>
+  <p>Google Play Billing processes Pro purchases and restores. The app receives purchase information such as product identifiers, purchase state, and purchase tokens to acknowledge purchases and determine access to paid features. Payment details are handled by Google Play; GestureFlow does not receive your full payment-card details. Purchase entitlement information is stored locally. The current app does not send purchase tokens to a developer-operated purchase server.</p>
 
-  <h2>Installed Apps and App Selection</h2>
-  <p>The Application uses the list of installed launchable apps only to allow the user to select apps for actions such as launching an app or blocking gestures in specific apps. This information is used solely for on-device app selection and local preference storage.</p>
-  <p><strong>No installed app list is transmitted, sold, or shared with third parties.</strong></p>
+  <h2>Location</h2>
+  <p>GestureFlow does not request precise GPS location for gesture features. Advertising services may infer approximate location from your IP address as described above.</p>
 
-  <h2>Settings Storage</h2>
-  <p>The Application stores user preferences locally on the device, such as selected actions, sensitivity level, blocked apps, and setup state. These settings are stored only to provide Application functionality and personalization.</p>
-  <p><strong>These settings remain on your device and are not transmitted to the Service Provider.</strong></p>
+  <h2>Sharing and service providers</h2>
+  <p>Google provides advertising, consent, Firebase Authentication, Cloud Firestore, and Google Play purchase services. Public Community submissions are shared with Community users. User-selected exports, email, text-to-speech, and configured actions may disclose information to the providers or apps you choose. We do not sell Community submissions or support correspondence to advertisers.</p>
+  <p>For Firebase processing and security information, see <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>. Providers may process information outside your country according to their terms and applicable safeguards.</p>
 
-  <h2>Does the Application collect precise real-time location information?</h2>
-  <p>This Application does not collect precise information about the location of your mobile device.</p>
-
-  <h2>Advertising and Third-Party Services</h2>
-  <p>The Application uses third-party services provided by Google LLC, which may collect data in accordance with their respective privacy policies:</p>
-  <ul>
-    <li><strong>Google AdMob & User Messaging Platform (UMP):</strong> May collect advertising identifiers, device info, and usage metrics to serve and measure ads and manage user consent choices.</li>
-    <li><strong>Google Firebase (Analytics, Authentication & Cloud Firestore):</strong> For aggregated usage analytics and hosting optional user feedback submissions.</li>
-  </ul>
-  <p>You can opt out of personalized advertising through your device's ad settings (Settings → Google → Ads → Opt out of Ads Personalization) or within the in-app Privacy Options form.</p>
-  <p>For more information on how Google uses data, see: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a></p>
-
-  <h2>Do third parties see and/or have access to information obtained by the Application?</h2>
-  <p>Aside from the Google services described above (AdMob and Firebase Analytics / Firestore for optional feedback), the Application does not collect personal information, and no other data handled by the Application is shared with third parties.</p>
-
-  <h2>What are my opt-out rights?</h2>
-  <p>You can stop the Application's functionality at any time by:</p>
-  <ul>
-    <li>Disabling the Accessibility Service for the Application in Android settings.</li>
-    <li>Turning off gesture detection inside the Application settings.</li>
-    <li>Uninstalling the Application.</li>
-  </ul>
+  <h2>Retention, deletion, and your choices</h2>
+  <p>Local app data remains until removed through available app controls, Android’s app-data controls, or uninstallation. Uninstalling does not delete exported files, messages sent through email, purchases held by Google Play, or Community data stored remotely.</p>
+  <p>You can delete your own Community posts and remove your votes using the available Community controls while the app retains the associated Firebase identity. The client does not apply an automatic expiry to Community records. Deleting a post does not automatically delete its associated feedback or moderation reports. Those records require separate removal. Clearing app data or reinstalling may remove access to the identity needed to manage earlier submissions.</p>
+  <p>To request deletion of Community records or support correspondence, email <a href="mailto:gabrieldrvss@gmail.com">gabrieldrvss@gmail.com</a> with enough information to locate the relevant records, such as the post title or ID. We may need to verify the request, and may be unable to identify an anonymous submission without sufficient information. Data retained by Google for its own services is subject to Google’s retention and deletion controls.</p>
+  <p>You can disable each gesture feature independently, revoke Accessibility, notification-listener, Bluetooth, root, or Shizuku access as applicable, avoid Community participation, change available advertising choices, clear app data, or uninstall the app. These choices may limit related functionality.</p>
 
   <h2>Children</h2>
-  <p>The Application is not used to knowingly solicit data from or market to children under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children.</p>
+  <p>GestureFlow is not directed to children under 13. We do not knowingly solicit personal information from children under 13. If you believe a child has submitted personal information through Community or support, contact us so we can investigate and address it.</p>
 
   <h2>Security</h2>
-  <p>The Service Provider is committed to safeguarding user privacy. All network communications with Firebase and Google services are encrypted in transit using industry-standard HTTPS/TLS protocols.</p>
+  <p>Connections to Firebase and Google advertising services use encrypted transport. Access to Community writes is restricted using authentication and database rules; published Community records are intended for other users to read. No storage or transmission method can guarantee complete security. Protect your exported backups and avoid publishing sensitive information.</p>
 
-  <h2>Changes</h2>
-  <p>This Privacy Policy may be updated from time to time. The Service Provider will notify you of any changes by updating this page.</p>
-
-  <p><strong>Effective Date:</strong> 2026-09-01</p>
-
-  <h2>Contact Us</h2>
-  <p>If you have any questions regarding privacy while using the Application, please contact: <a href="mailto:gabrieldrvss@gmail.com">gabrieldrvss@gmail.com</a></p>
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy as GestureFlow changes. Updates will appear on this page with a revised effective date. Where required, we will provide additional notice or seek consent for material changes.</p>
 </body>
 </html>
